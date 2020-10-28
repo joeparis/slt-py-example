@@ -75,12 +75,15 @@ def get_circles(filename):
     Read in from the YAML file supplied and create
     a list of circles based on the input data.
     """
+    handle = None
+    data = None
     try:
         handle = open(filename, "r")
         data = yaml.safe_load(handle)
     except yaml.YAMLError as error:
         print(error)
     finally:
+        if handle:
         handle.close()
 
     # Use a list comprehension to create a new Circle
