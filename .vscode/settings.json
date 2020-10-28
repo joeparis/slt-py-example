@@ -1,0 +1,18 @@
+{
+	"python.pythonPath": ".venv\\Scripts\\python.exe",
+	"python.linting.pydocstyleEnabled": false,
+	"python.linting.pycodestyleEnabled": false,
+	"python.envFile": "${workspaceFolder}/.env",
+	"terminal.integrated.env.osx": {
+		"PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+	},
+	"terminal.integrated.env.linux": {
+		"PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}",
+	},
+	"terminal.integrated.env.windows": {
+		"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}",
+	},
+	"python.analysis.extraPaths": [
+		"small"
+	]
+}
