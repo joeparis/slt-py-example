@@ -36,7 +36,7 @@ def main(argv):
     for general_shape in general_shapes:
         print("Type:  " + str(general_shape))
         print(" Area:  {0} {1} sq".format(general_shape.area(), units))
-        print(f" Perim: {general_shape.perimeter()} {units}\n")
+        print(f" Perimeter: {general_shape.perimeter()} {units}\n")
 
     # Create a list of shapes as dictionaries and write as JSON
     with open("outputs/computations.json", "w") as handle:
