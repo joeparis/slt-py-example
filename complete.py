@@ -8,9 +8,11 @@ Purpose: Entrypoint for our simple application.
 
 import json
 import sys
+
 import yaml
-from shapes.rectangle import Rectangle
+
 from shapes.circle import Circle
+from shapes.rectangle import Rectangle
 
 
 def main(argv):
