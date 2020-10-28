@@ -1,4 +1,6 @@
 import yaml
+
+handle = None
 try:
     handle = open("nick.yml", "r")
     data = yaml.safe_load(handle)
@@ -6,4 +8,5 @@ try:
 except yaml.YAMLError as error:
     print(error)
 finally:
-    handle.close()
+    if handle:
+        handle.close()
