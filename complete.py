@@ -8,6 +8,7 @@ Purpose: Entrypoint for our simple application.
 
 import json
 import sys
+from pathlib import Path
 
 import yaml
 
@@ -36,7 +37,12 @@ def main(argv):
     for general_shape in general_shapes:
         print("Type:  " + str(general_shape))
         print(" Area:  {0} {1} sq".format(general_shape.area(), units))
-        print(f" Perimeter: {general_shape.perimeter()} {units}\n")
+        print(f" Perim: {general_shape.perimeter()} {units}\n")
+
+    Path("outputs").mkdir(exist_ok=True)
+
+    # if not p.exists():
+    #     p.mkdir()
 
     # Create a list of shapes as dictionaries and write as JSON
     with open("outputs/computations.json", "w") as handle:
@@ -84,7 +90,7 @@ def get_circles(filename):
         print(error)
     finally:
         if handle:
-        handle.close()
+            handle.close()
 
     # Use a list comprehension to create a new Circle
     # object for each radius integer found in the circle_list.
